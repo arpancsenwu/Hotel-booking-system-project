@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Guest Information</h2>
+<form method="POST" action="{{ url_for('guestinfo') }}">
+    <div class="mb-3">
+        <label for="room_no" class="form-label">Room Number</label>
+        <input type="number" class="form-control" id="room_no" name="room_no" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Get Info</button>
+</form>
+
+{% if guest %}
+<div class="mt-4">
+    <h3>Guest Details</h3>
+    <p><strong>Name:</strong> {{ guest.name }}</p>
+    <p><strong>Address:</strong> {{ guest.address }}</p>
+    <p><strong>Mobile No.:</strong> {{ guest.mobile_no }}</p>
+    <p><strong>Room No.:</strong> {{ guest.room_no }}</p>
+    <p><strong>Price:</strong> {{ guest.price }}</p>
+    <p><strong>Check-In Date:</strong> {{ guest.checkin_date }}</p>
+</div>
+{% endif %}
+{% endblock %}

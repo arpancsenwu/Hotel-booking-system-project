@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Guest Check-Out</h2>
+<form method="POST" action="{{ url_for('checkout') }}">
+    <div class="mb-3">
+        <label for="room_no" class="form-label">Room Number</label>
+        <input type="number" class="form-control" id="room_no" name="room_no" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Check Out</button>
+</form>
+{% endblock %}

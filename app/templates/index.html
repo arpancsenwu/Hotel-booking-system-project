@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h1>Welcome to Hotel Booking System</h1>
+    <p>Your one-stop solution for hotel management.</p>
+    <a href="{{ url_for('checkin') }}" class="btn btn-success">Check In</a>
+    <a href="{{ url_for('checkout') }}" class="btn btn-danger">Check Out</a>
+    <a href="{{ url_for('guestlist') }}" class="btn btn-info">Guest List</a>
+    <a href="{{ url_for('guestinfo') }}" class="btn btn-primary">Guest Info</a>
+</div>
+{% endblock %}
